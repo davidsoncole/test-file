@@ -14,12 +14,13 @@
   <!-- LRNWebComponents -->
   <!-- <link href="https://cdn.rawgit.com/LRNWebComponents/build/0.2.0/build/default/build.html" rel="import" /> -->
   <!-- include ar.js for A-Frame -->
-  <!-- <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script> -->
+  <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 </head>
 
 <body>
-  <a-scene>
-    <a-entity gltf-model="assets/animatedbox.gltf"></a-entity>
+  <a-scene embedded arjs>
+    <a-entity gltf-model="assets/animatedbox.gltf" scale="-1 1 1"></a-entity>
+    <a-marker-camera preset='hiro'></a-marker-camera>
     <a-sky color="#ECECEC"></a-sky>
   </a-scene>
   <script src="app.js"></script>
